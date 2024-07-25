@@ -5,6 +5,9 @@ class ProdutoController {
     static async listarProdutos (req, res){
         try{
             const listaProdutos = await produto.find({});
+            res.setHeader('Access-Control-Allow-Origin', '*');
+            res.setHeader('Access-Control-Allow-Headers', 'content-type');
+            res.setHeader('Access-Control-Allow-Methods', 'PUT, DELETE, PATCH');
             res.status(200).json(listaProdutos);
         }catch (erro){
             res.status(500).json({message: `${erro.message} - Falha na requisição`});

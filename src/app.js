@@ -19,13 +19,4 @@ routes(app);
 
 
 
-
-app.delete("/produtos/:id", (req, res) => {
-    const index = buscaProduto(req.params.id);
-    produtos.splice(index, 1);
-    res.status(200).send("Produto deletado");
-})
-
-
-
 export default app;
