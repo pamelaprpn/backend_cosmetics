@@ -1,6 +1,7 @@
 import express from "express";
 import connectaNaDatabase from "./config/dbConnect.js";
 import routes from "./routes/index.js";
+import 'dotenv/config';
 
 const conexao = await connectaNaDatabase();
 
@@ -15,8 +16,5 @@ conexao.once("open", () => {
 const app = express();
 
 routes(app);
-
-
-
 
 export default app;

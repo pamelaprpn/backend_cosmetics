@@ -29,9 +29,15 @@ class ProdutoController {
 
     static async cadastraProduto (req, res){
         try {
+            if(Object.keys(req.body).length === 0){
+               throw new Error('Corpo da requisição vazio');
+            }
             const novoProduto = await produto.create(req.body);
             res.status(201).json({message: "Criado com sucesso", produto: novoProduto});
         }catch (erro) {
+            if(erro.message === 'Corpo da requisição vazio'){
+                return res.status(400).json(erro.message);
+            }
             res.status(500).json({message: `${erro.message} - Falha ao cadastrar produto`});
         }
         
@@ -41,7 +47,7 @@ class ProdutoController {
         try{
             const id = req.params.id;
             await produto.findByIdAndUpdate(id, req.body);
-            res.status(200).json({ message: "Produto atualizado"});
+            res.status(204).json({ message: "Produto atualizado"});
         }catch (erro){
             res.status(500).json({message: `${erro.message} - Falha no update`});
         }
