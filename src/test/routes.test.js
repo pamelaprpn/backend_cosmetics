@@ -1,4 +1,4 @@
-import { afterEach, beforeEach, describe, expect, it } from '@jest/globals';
+import { afterEach, beforeEach, describe, expect, it, test, jest } from '@jest/globals';
 import app from '../app.js';
 import supertest from 'supertest';
 
@@ -46,7 +46,7 @@ describe('POST em /produtos', () => {
         console.log(resposta)
     });
 
-    it('Deve adicionar nada ao passar body vazio', async () => {
+    it('Deve não adicionar nada ao passar body vazio', async () => {
         await request(app)
         .post('/produtos')
         .send({})
@@ -64,11 +64,24 @@ describe('GET em /produtos/id', () => {
 });
 
 describe('PUT em /produtos/id', () => {
-    it('DEve alterar o campo nome', async () => {
-        await request(app)
-        .put(`/produtos/${idResposta}`)
-        .send({name: 'Produto teste'})
-        .expect(204);
+    test.each([
+        ['nome', { name: "Açúcar Esfoliante Teste" }],
+        ['preço antigo', { priceOld: 77.90 }],
+        ['preço atual', { priceActual: 57.50 }],
+        ['imagem', { image: "./assets/produtos/esfoliante.svg" }],
+        ['avaliação', { avaliacao: "./assets/Estrelinhas4.svg" }],
+        ['categoria', { categoria: "Skincare" }],
+        ['lançamento', { lancamento: true }],
+    ])('Deve alterar o campo %s', async (param) => {
+
+        const requisicao = { request };
+        const spy = jest.spyOn(requisicao, 'request');
+        await requisicao.request(app)
+            .put(`/produtos/${idResposta}`)
+            .send(param)
+            .expect(204);
+
+        expect(spy).toHaveBeenCalled();
     })
 })
 
