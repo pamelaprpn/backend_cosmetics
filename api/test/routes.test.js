@@ -1,12 +1,12 @@
 import { afterEach, beforeEach, describe, expect, it, test, jest } from '@jest/globals';
-import app from '../app.js';
+import app from '../index.js';
 import supertest from 'supertest';
 
 const request = supertest;
 
 let server;
 beforeEach(() => {
-    const port = 3000;
+    const port = 3001;
     server = app.listen(port);
 });
 
@@ -43,7 +43,6 @@ describe('POST em /produtos', () => {
             .expect(201);
 
         idResposta = resposta._body.produto._id;
-        console.log(resposta)
     });
 
     it('Deve não adicionar nada ao passar body vazio', async () => {

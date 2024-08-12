@@ -5,6 +5,14 @@ import 'dotenv/config';
 
 const conexao = await connectaNaDatabase();
 
+const PORT = 3000;
+
+const app = express();
+
+app.listen(PORT, () => {
+    console.log("Servidor executando");
+});
+
 conexao.on("error", (erro) => {
     console.error("erro de conexão", erro);
 });
@@ -13,7 +21,6 @@ conexao.once("open", () => {
     console.log("Conexão com o banco feita com sucesso");
 })
 
-const app = express();
 
 routes(app);
 
