@@ -16,12 +16,14 @@
 <p align="center">
  <a href="#started">Getting Started</a> • 
  <a href="#routes">API Endpoints</a> •
- <a href="#colab">Collaborators</a> •
- <a href="#contribute">Contribute</a>
+ <a href="#colab">Colaboradores</a> •
 </p>
 
 <p align="center">
-  <b>Projeto desenvolvido durante o programa Desenvolve da Boticario. Se trata de um site de vendas de produtos de cosméticos e produtos de beleza </b>
+  <b>Projeto desenvolvido durante o programa Desenvolve da Boticario em parceria com a alura.</b>
+  O objetivo do desafio foi a criação de um site na seção de produtos de beleza e cosméticos.
+  O projeto foi desenvolvido em 3 etapas durante o programa, a primeita etapa foi a contrução de site responsivo usando somente HTML e CSS, a segunda etapa a inclusão de interatividade com manipulação do DOM e a terceira estapa foi a construção de uma API e a integração com o front-end e banco de dados.
+  
 </p>
 
 <h2 id="started">🚀 Getting started</h2>
@@ -29,7 +31,12 @@
 
 <h3>Pré - Requisitos</h3>
 
-- [NodeJS]
+- NodeJS
+- Para rodar localmente usar comandos: </br>
+npm i - para baixar dependencias </br>
+npm run dev - para carregar servidor e banco de dados </br>
+npm run test - para rodar os testes de integração </br>
+- Ropositorio do front-end: https://github.com/pamelaprpn/cosmetics-sales.
 
 
 <h2 id="routes">📍 API Endpoints</h2>
@@ -39,10 +46,10 @@
 ​
 | route               | description                                          
 |----------------------|-----------------------------------------------------
-| <kbd>GET /produtos</kbd>     | retrieves user info see [response details](#get-auth-detail)
-| <kbd>POST /produtos</kbd>     | authenticate user into the api see [request details](#post-auth-detail)
-| <kbd>PUT /produtos</kbd>     | authenticate user into the api see [request details](#put-auth-detail)
-| <kbd>DELETE /produtos</kbd>     | authenticate user into the api see [request details](#delete-auth-detail)
+| <kbd>GET /produtos</kbd>     | Retorna produtos [response details](#get-auth-detail)
+| <kbd>POST /produtos</kbd>     | Insere um novo produto [request details](#post-auth-detail)
+| <kbd>PUT /produtos</kbd>     | Altera dados de um produto [request details](#put-auth-detail)
+| <kbd>DELETE /produtos</kbd>     | Deleta um produto [response details](#delete-auth-detail)
 
 <h3 id="get-auth-detail">GET /produtos</h3>
 
@@ -61,6 +68,7 @@
 ```
 
 <h3 id="post-auth-detail">POST /produtos</h3>
+
 
 **REQUEST**
 ```json
@@ -81,6 +89,63 @@
 ```json
 {
    "message": "Criado com sucesso",
+   "produto": {
+        "name": "Açúcar Esfoliante Óleo Desodorante Nativa SPA Ameixa 200g",
+        "priceOld": 77.90,
+        "priceActual": 57.50,
+        "image": "./assets/produtos/esfoliante.svg",
+        "avaliacao": "./assets/Estrelinhas4.svg",
+        "categoria": "Skincare",
+        "lancamento": true,
+        "_id": "66a19b1405f961dff7bd813f"
+    }
 }
 ```
 
+<h3 id="put-auth-detail">PUT /produtos</h3>
+
+<p>Endpoint: https://backend-cosmetics-sepia.vercel.app/produtos/id</p>
+
+**REQUEST**
+```json
+{
+    {   
+    "priceActual": 57.50,
+    "lancamento": true
+}
+}
+```
+
+**RESPONSE**
+```json
+{
+   "message": "Produto atualizado"
+}
+```
+
+<h3 id="delete-auth-detail">DELETE /produtos</h3>
+
+<p>Endpoint: https://backend-cosmetics-sepia.vercel.app/produtos/id</p>
+
+
+**RESPONSE**
+```json
+{
+   "message": "Produto excluído"
+}
+```
+
+<h2 id="colab">🤝 Colaboradores</h2>
+
+<table>
+    <tr>
+        <td align="center">
+        <a href="#">
+            <img src="https://avatars.githubusercontent.com/u/41830544?v=4" width="100px;" alt="Pamela Profile Picture"/><br>
+            <sub>
+            <b>Pâmela Raiane</b>
+            </sub>
+        </a>
+        </td>
+    </tr>
+</table>
