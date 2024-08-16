@@ -72,7 +72,7 @@
 **REQUEST**
 ```json
 {
-  {
+  
     "name": "Açúcar Esfoliante Óleo Desodorante Nativa SPA Ameixa 200g",
     "priceOld": 77.90,
     "priceActual": 57.50,
@@ -80,7 +80,7 @@
     "avaliacao": "./assets/Estrelinhas4.svg",
     "categoria": "Skincare",
     "lancamento": true
-}
+
 }
 ```
 
@@ -107,11 +107,9 @@
 
 **REQUEST**
 ```json
-{
-    {   
+{      
     "priceActual": 57.50,
     "lancamento": true
-}
 }
 ```
 
