@@ -20,10 +20,9 @@
 </p>
 
 <p align="center">
-  <b>Projeto desenvolvido durante o programa Desenvolve da Boticario em parceria com a alura.</b>
-  O objetivo do desafio foi a criação de um site na seção de produtos de beleza e cosméticos.
-  O projeto foi desenvolvido em 3 etapas durante o programa, a primeita etapa foi a contrução de site responsivo usando somente HTML e CSS, a segunda etapa a inclusão de interatividade com manipulação do DOM e a terceira estapa foi a construção de uma API e a integração com o front-end e banco de dados.
-  
+  <b>Projeto desenvolvido durante o programa Desenvolve da Boticário em parceria com a Alura.</b></br>
+  O objetivo do desafio foi a criação de um site na seção de produtos de beleza e cosméticos.</br>
+  O projeto foi desenvolvido em 3 etapas durante o programa, a primeira etapa foi a construção de site responsivo usando somente HTML e CSS, a segunda etapa a inclusão de interatividade com manipulação do DOM e a terceira etapa foi a construção de uma API e a integração com o front-end e banco de dados. 
 </p>
 
 <h2 id="started">🚀 Getting started</h2>
@@ -33,10 +32,10 @@
 
 - NodeJS
 - Para rodar localmente usar comandos: </br>
-npm i - para baixar dependencias </br>
-npm run dev - para carregar servidor e banco de dados </br>
-npm run test - para rodar os testes de integração </br>
-- Ropositorio do front-end: https://github.com/pamelaprpn/cosmetics-sales.
+    npm i - para baixar dependências </br>
+    npm run dev - para carregar servidor e banco de dados </br>
+    npm run test - para rodar os testes de integração </br>
+- Repositório do front-end: https://github.com/pamelaprpn/cosmetics-sales.
 
 
 <h2 id="routes">📍 API Endpoints</h2>
