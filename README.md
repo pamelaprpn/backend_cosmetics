@@ -16,7 +16,7 @@
 <p align="center">
  <a href="#started">Getting Started</a> • 
  <a href="#routes">API Endpoints</a> •
- <a href="#colab">Colaboradores</a> •
+ <a href="#colab">Colaboradores</a> 
 </p>
 
 <p align="center">
