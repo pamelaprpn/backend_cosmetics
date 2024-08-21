@@ -35,8 +35,14 @@
     npm i - para baixar dependências </br>
     npm run dev - para carregar servidor e banco de dados </br>
     npm run test - para rodar os testes de integração </br>
-    Caso precise do valor da variável MONGODB_URI do arquivo .env entrar em contato </br>
-- Repositório do front-end: https://github.com/pamelaprpn/cosmetics-sales.
+- Repositório do front-end: https://github.com/pamelaprpn/cosmetics-sales. </br>
+- O arquivo .env é utilizado para armazenar variáveis de ambiente necessárias para o funcionamento do aplicativo, incluindo credenciais sensíveis. O arquivo .env deve ser configurado localmente em cada ambiente de desenvolvimento. </br>
+  Estrutura do arquivo .env: MONGODB_URI=mongodb+srv://<user>:<password>@cluster.mongodb.net/<dbname>?retryWrites=true&w=majority </br>
+  Substitua <user>, <password>, <dbname> e outros parâmetros conforme necessário com suas credenciais e informações específicas do seu MongoDB. </br>
+  Configuração do .env </br>
+    1 - Crie um arquivo chamado .env na raiz do seu projeto. </br>
+    2 - Adicione as variáveis de ambiente necessárias no formato VARIAVEL=valor. </br>
+    3 - Salve o arquivo.
 
 
 <h2 id="routes">📍 API Endpoints</h2>
