@@ -35,6 +35,7 @@
     npm i - para baixar dependências </br>
     npm run dev - para carregar servidor e banco de dados </br>
     npm run test - para rodar os testes de integração </br>
+    Caso precise do valor da variável MONGODB_URI do arquivo .env entrar em contato </br>
 - Repositório do front-end: https://github.com/pamelaprpn/cosmetics-sales.
 
 
